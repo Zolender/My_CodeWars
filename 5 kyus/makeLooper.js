@@ -7,9 +7,21 @@ function makeLooper(str) {
   return char;
 }
 
-console.log(makeLooper("eben"))
-console.log(makeLooper("eben"))
-console.log(makeLooper("eben"))
-console.log(makeLooper("eben"))
-console.log(makeLooper("eben"))
-console.log(makeLooper("eben"))
+
+function makeLooper2(str){
+    let index =0;
+
+    return function(){
+        let char = str[index];
+        index = (index+1)%str.length;
+        return char;
+    }
+}
+
+const abcLooper = makeLooper2("abc");
+
+console.log(abcLooper()); 
+console.log(abcLooper()); 
+console.log(abcLooper()); 
+console.log(abcLooper()); 
+console.log(abcLooper()); 
