@@ -21,3 +21,21 @@ function squareProduct(n) {
   
     return result;
 }
+
+
+//let's make it better
+function squareProduct2(n){
+    let sqrtN = Math.sqrt(n);
+    //if the number isn't a perfect square then there won't be any matching values 
+    if(sqrtN % 1!==0)return [];
+//knowing that i*j = sqrtN, that means i <= sqrt(sqrtN); and therefore, j would just be deduced from both values
+    let result= [];
+    let a = Math.sqrt(sqrtN)
+  for (let i = 1; i <= Math.sqrt(a); i++) {
+    if (sqrtN % i === 0) {
+      let j = sqrtN/ i;
+      result.push([i, j]);
+        }
+    }
+    return result;
+}
