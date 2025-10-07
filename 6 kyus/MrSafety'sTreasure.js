@@ -11,5 +11,5 @@ function unlock(str){
     w:9,x:9,y:9,z:9
   }
   
-   return str.toLowerCase().split('').map(x=>keypad[x]).join('') ;
+  return str.toLowerCase().split('').map(x=>keypad[x]).join('') ;
 }
