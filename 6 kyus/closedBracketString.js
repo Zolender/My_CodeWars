@@ -1,0 +1,3 @@
+function closedBrackets(s) {
+    
+}
